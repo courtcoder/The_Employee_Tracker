@@ -1,7 +1,7 @@
 # The_Employee_Tracker
 ## As a business owner, I want to be able to view and manage the departments, roles, and employees in my company, so that I can organize and plan my business.
 
-## GIVEN a command-line application that accepts user input
+### GIVEN a command-line application that accepts user input
 ## WHEN I start the application
 ## THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
 ## WHEN I choose to view all departments
