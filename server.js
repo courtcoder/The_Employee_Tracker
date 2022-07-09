@@ -56,7 +56,7 @@ function start() {
 }
 function viewAllEmployees() {
   const request = "SELECT * FROM employee";
-  db.query(request, function (err, res) {
+  db.query(request, function (err,) {
     if (err) console.log(err);
     {
       console.log("Viewing All Employees");
@@ -327,12 +327,13 @@ function UpdateEmployeeRoles() {
         .then(function (response) {
           const employeeIndex = employeeNames.indexOf(response.employeeName);
           const roleIndex = employeeRoles.indexOf(response.roles);
-          const employeeID = employeeID[employeeIndex];
+          const employeeid = employeeID[employeeIndex];
           const roleID = employeeRoleID[roleIndex];
 
           db.query(
-            `UPDATE employee SET roles_id = ? WHERE employee_id = ?`,
-            [employeeID, roleID],
+            `UPDATE employee SET roles_id = ? WHERE id = ?`,
+            [roleID, employeeid], 45,
+            
             (err, response) => {
               if (err) throw err;
               console.log(

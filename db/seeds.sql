@@ -17,7 +17,7 @@ VALUES
 INSERT INTO employee (first_name, last_name, roles_id, manager_id)
 VALUES
 ('Misdreavus', 'Mismagius', '1', '1'),
-('Kirlia', 'Gardevoir', '2', '2'),n
+('Kirlia', 'Gardevoir', '2', '2'),
 ('Machop', 'Machamp', '3', '3'),
 ('Dragonair', 'Dragonite', '4', '4'),
 ('Eevee', 'Leafeon', '5', '5');
