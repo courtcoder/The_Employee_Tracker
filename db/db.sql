@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS Pokedex;
+
+CREATE DATABASE Pokedex;
+USE Pokedex;
+
