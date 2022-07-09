@@ -87,30 +87,34 @@ function viewAllEmployees() {
 function viewAllRoles() {
   const request = "SELECT * FROM roles";
   db.query(request, function (err, res) {
-    if (err) throw err;
-    console.log("View All Roles");
-    console.table(res);
-    inquirer
-      .prompt([
-        {
-          type: "list",
-          name: "choice",
-          message: "Select an Option.",
-          choices: ["Main Menu", "Quit"],
-        },
-      ])
-      .then((answer) => {
-        switch (answer.choice) {
-          case "Main Menu":
-            start();
-            break;
-          case "Quit":
-            return Quit();
-            break;
-        }
-      });
+    if (err) console.log(err);
+    {
+      console.log("View All Roles");
+      console.table(res);
+      inquirer
+        .prompt([
+          {
+            type: "list",
+            name: "choice",
+            message: "Select an Option.",
+            choices: ["Main Menu", "Quit"],
+          },
+        ])
+        .then((answer) => {
+          switch (answer.choice) {
+            case "Main Menu":
+              start();
+              break;
+            case "Quit":
+              return Quit();
+              break;
+          }
+        });
+    }
   });
 }
+
+
 
 function viewDepartments() {
   const request = "SELECT * FROM department";
