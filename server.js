@@ -56,7 +56,7 @@ function start() {
 }
 function viewAllEmployees() {
   const request = "SELECT * FROM employee";
-  db.query(request, function (err,) {
+  db.query(request, function (err,res) {
     if (err) console.log(err);
     {
       console.log("Viewing All Employees");
@@ -336,16 +336,12 @@ function UpdateEmployeeRoles() {
 
           db.query(
             `UPDATE employee SET roles_id = ? WHERE id = ?`,
-            [roleID, employeeid], 45,
+            [roleID, employeeid], 
             
             (err, response) => {
               if (err) throw err;
               console.log(
-                "Updated " +
-                  data.employee_name +
-                  " to role " +
-                  data.role_title +
-                  " in the database"
+                "Updated " 
               );
 
               inquirer
